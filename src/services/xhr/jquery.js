@@ -1,21 +1,36 @@
-import { rootPath, errHandler } from './config'
+// const API_BASE_PATH = '/api'
 
-const xhr = ({ url, body = null, method = 'get' }) => {
-  const defer = $.Deferred()
-
-  $.ajax({
-    type: method,
-    url: rootPath + url,
-    data: body
-    // xhrFields: { // 跨域允许带上 cookie
-    //   withCredentials: [域名]
-    // },
-    // crossDomain: true
-  })
-  .done(defer.resolve)
-  .fail(errHandler)
-
-  return defer.promise()
-}
-
-export default xhr
+// /**
+//  * xhr interface implementation
+//  * @param   {Object}   req  - Request body
+//  * @param   {Boolean}  mute - Mute the notification of rejection
+//  * @resolve {Object}
+//  * @reject  {Response}
+//  */
+// export default function xhr(req, mute) {
+//   const { method = 'get', url, body = null } = req
+  
+//   return new Promise((resolve, reject) => {
+//     $.ajax({
+//       type: method,
+//       url: API_BASE_PATH + url,
+//       data: body
+//       // crossDomain: true,
+//       // xhrFields: { withCredentials: true }
+//     })
+//     .done(res => {
+//       const { success, message, data } = res
+//       if (!success) {
+//         if (!mute) {
+//           alert('Operation failed: ' + message)
+//         }
+//         return reject(res)
+//       }
+//       resolve(data)
+//     })
+//     .fail(() => {
+//       alert('Failed to get response from server')
+//       reject()
+//     })
+//   })
+// }
