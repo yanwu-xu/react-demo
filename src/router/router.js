@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router, Route, IndexRoute, Redirect, hashHistory } from 'react-router'
-import MainPage from '../components/main'
+import MainPage from '../components/main.js'
 
 import Login from '../components/login'
 import container from '../components/container'
