@@ -11,13 +11,12 @@ var compiler = webpack(config);
 // Serve static during dev
 app.use('/static', express.static(PATHS.STATIC));
 
-// Mock server
-app.use('/api', proxy({
-  target: 'http://127.0.0.1:' + PORTS.MOCK_SERVER,
+//Mock server
+app.use('/OperationWeb/', proxy({
+  target: 'http://10.200.133.26:9030/',
   changeOrigin: true,
   pathRewrite: {
-    // [Dev Server]/api/xxx <=> [Mock Server]/xxx
-    '^/api': '/'
+    '^/OperationWeb/': 'http://10.200.133.26:9030/'
   }
 }));
 

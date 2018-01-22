@@ -9,8 +9,8 @@ class App extends Component {
         var phone = this.refs.phone.value.trim();
         var code = this.refs.code.value.trim();
         $.ajax({
-            url: '/account/user/login',
-            type: 'post',
+            url: '/OperationWeb/ad_place/adplace_detail/FDPCBAN0001',
+            type: 'get',
             success: (data) => {
                 alert('成功！！！')
             },
