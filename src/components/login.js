@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import './login.scss'
+import aa from '../img/aa.png'
+import bb from '../img/bb.png'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -22,6 +23,9 @@ class App extends Component {
     render() {
         return (
             <div className="login">
+                <img src={aa} />
+                <div>121212121212121</div>
+                <img src={bb} />
                 <div className="login-bd">
                     <div className="login-item login-item1">
                         <input className="login-input" ref="phone" type="tel" placeholder="请输入手机号"/>
