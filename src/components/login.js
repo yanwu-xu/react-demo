@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import aa from '../img/aa.png'
-import bb from '../img/bb.png'
+import aa from '../img/home/aa.png'
+import bb from '../img/home/bb.png'
+import '../css/login.scss'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +26,7 @@ class App extends Component {
             <div className="login">
                 <img src={aa} />
                 <div>121212121212121</div>
-                <img src={bb} />
+                <img className="imgSty" src={bb} />
                 <div className="login-bd">
                     <div className="login-item login-item1">
                         <input className="login-input" ref="phone" type="tel" placeholder="请输入手机号"/>
@@ -37,6 +38,8 @@ class App extends Component {
                 <div className="login-ft">
                     <button className="ui-btn ui-btn1" onClick={this.login}>登录</button>
                 </div>
+                <div className="backGround">5555555555555555555</div>
+                <div className="backGround1">5555555555555555555</div>
             </div>
         );
     }

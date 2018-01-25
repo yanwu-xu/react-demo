@@ -4,7 +4,6 @@ var webpack = require('webpack'),
   styleRules = require('./config/style-rules'),
   HtmlWebpackPlugin = require('html-webpack-plugin');
   //NyanProgressPlugin = require('nyan-progress-webpack-plugin');
-
 module.exports = {
   entry: {
     app: PATHS.SRC.join('app.js')
@@ -37,8 +36,11 @@ module.exports = {
       test: /\.(png|jpe?g|gif|svg)$/,
       loader: 'url-loader',
       options: {
+        outputPath: 'img/',
+        publicPath: '../img/',
         limit: 10240,
-        name: 'img/[name]-[hash:6].[ext]'
+        name: '[name]-[hash:6].[ext]',
+        useRelativePath:true
       }
     }, {
       test: /\.(woff2?|eot|ttf|otf)$/,
@@ -66,3 +68,5 @@ module.exports = {
     })
   ]
 };
+
+console.log('111111111111111111111111111111', typeof(JSON.stringify(ENV.__ENV__)))
