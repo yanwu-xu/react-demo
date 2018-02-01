@@ -10,7 +10,12 @@ const RouterConfig = (
     <Route path="/" component={MainPage}>
       <IndexRoute component={Login} />
       <Route path="/login" component={Login} />
-      <Route path="/container" component={container} />
+      <Route path="/container" 
+             getComponent={(location, cb) => {
+              require.ensure([], require => {
+                  cb(null, require('../components/container').default)
+              },'container')
+      }} />
       <Redirect from="*" to="/" />
     </Route>
   </Router>
