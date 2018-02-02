@@ -1,13 +1,13 @@
 import React from 'react'
 import '../css/aa.scss'
-const aa = React.createClass({
+const bb = React.createClass({
   render() {
     return (
       <div className='aa'>
-        <span>aaaaaaaaaaaaaaaaaaaaa</span>
+        <span>bbbbbbbbbbbb</span>
       </div>
     )
   },
 })
 
-export default aa
+export default bb

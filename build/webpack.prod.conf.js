@@ -4,18 +4,18 @@ var webpack = require('webpack'),
   OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 config.output.filename = 'js/[name].[chunkhash:6].js';
-config.output.chunkFilename = 'js/[id].[chunkhash:6].js';
+config.output.chunkFilename = 'js/[name].[chunkhash:6].js';
 
 config.plugins.push(
   new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.optimize.UglifyJsPlugin({
     beautify: false,
-    comments: false,
-    compress: {
-      warnings: false,
-      collapse_vars: true,
-      reduce_vars: true
-    }
+      comments: false,
+      compress: {
+        warnings: false,
+        collapse_vars: true,
+        reduce_vars: true
+      }
   }),
   new webpack.optimize.CommonsChunkPlugin({
     name: 'manifest',
@@ -23,7 +23,7 @@ config.plugins.push(
   }),
   new webpack.optimize.AggressiveMergingPlugin(),
   new webpack.optimize.MinChunkSizePlugin({
-    minChunkSize: 30000
+    minChunkSize: 0//30000
   }),
   new ExtractTextPlugin({
     filename: 'css/[name].[contenthash:6].css',

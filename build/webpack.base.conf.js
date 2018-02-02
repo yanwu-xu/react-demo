@@ -56,17 +56,15 @@ module.exports = {
     new webpack.DefinePlugin(Object.assign({
       'process.env.NODE_ENV': JSON.stringify(ENV.__ENV__)
     }, ENV)),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: function (module) {
-        return module.context && module.context.indexOf('node_modules') !== -1;
-      }
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'vendor',
+    //   minChunks: function (module) {
+    //     return module.context && module.context.indexOf('node_modules') !== -1;
+    //   }
+    // }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: PATHS.SRC.join('index.html')
     })
   ]
 };
-
-console.log('111111111111111111111111111111', typeof(JSON.stringify(ENV.__ENV__)))

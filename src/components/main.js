@@ -5,7 +5,7 @@ const MainPage = React.createClass({
     return (
       <div>
         {this.props.children}
-        <span>12245gfaft</span>
+        <span>12245gfaft1111</span>
       </div>
     )
   },
