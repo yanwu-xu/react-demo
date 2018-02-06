@@ -3,7 +3,7 @@ var extract = require('extract-text-webpack-plugin').extract,
   ENV = require('./ENV');
 
 // config for postcss-loader see `.postcssrc`
-var basicLoaders = ['css-loader', 'postcss-loader'];
+var basicLoaders = ['css-loader', 'postcss-loader', 'px2rem-loader?remUnit=75'];//remUnit????1/10
 var LOADERS = {
   css: basicLoaders,
   less: basicLoaders.concat('less-loader'),
