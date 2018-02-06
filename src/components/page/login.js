@@ -22,7 +22,7 @@ class App extends Component {
                 alert('失败！！！')
             }
         })
-    }
+    };
     render() {
         return (
             <div className="login">
