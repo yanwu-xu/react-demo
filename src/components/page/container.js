@@ -1,13 +1,13 @@
-import React from 'react'
-import '../css/aa.scss'
-const aa = React.createClass({
+import React, {Component} from 'react'
+
+class Container extends Component {
   render() {
     return (
       <div className='aa'>
         <span>aaaaaaaaaaaaaaaaaaaaa</span>
       </div>
     )
-  },
-})
+  }
+}
 
-export default aa
+export default Container
