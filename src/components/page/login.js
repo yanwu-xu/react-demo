@@ -30,10 +30,10 @@ class App extends Component {
                 <img className="imgSty" src={bb} />
                 <div className="login-bd">
                     <div className="login-item login-item1">
-                        <input className="login-input" ref="phone" type="tel" placeholder="请输入手机号"/>
+                        <input className="login-input" ref="phone" type="tel" placeholder="手机号"/>
                     </div>
                     <div className="login-item login-item2">
-                        <input className="login-input" ref="code" type="tel" placeholder="请输入验证码"/>
+                        <input className="login-input" ref="code" type="tel" placeholder="验证码"/>
                     </div>
                 </div>
                 <div className="login-ft">
