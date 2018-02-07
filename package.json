@@ -1,8 +1,8 @@
 {
   "name": "react-scaffold",
   "description": "The best scaffold for React",
-  "author": "Ken Berkeley <kenberkeley@foxmail.com>",
-  "version": "2.0.0",
+  "author": "xudongdong",
+  "version": "1.0.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node build/dev.js",
     "build": "cross-env NODE_ENV=production node build/prod.js"
