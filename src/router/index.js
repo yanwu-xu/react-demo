@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, HashRouter, Switch } from 'react-router-dom';
+import { Route, HashRouter, Switch, Redirect } from 'react-router-dom';
 import routes from './routerConfig'
 
 const routerMap = (routes) => {
@@ -11,7 +11,11 @@ const routerMap = (routes) => {
                 </route.component>
             }></Route>
         } else {
-          return <Route key={index} path={route.path} render={props => <route.component {...props} />} />
+          if (route.auth) {
+            return <Redirect key={index} to='/' />
+          } else {
+            return <Route key={index} path={route.path} render={props => <route.component {...props} />} />
+          }
         }
     })
 }
