@@ -14,7 +14,7 @@ const routerMap = (routes) => {
           if (route.auth) {
             return <Redirect key={index} to='/' />
           } else {
-            return <Route key={index} path={route.path} render={props => <route.component {...props} />} />
+            return <Route exact key={index} path={route.path} render={props => <route.component {...props} />} />
           }
         }
     })

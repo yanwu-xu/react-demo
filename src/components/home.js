@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Comp from './component'
+import Aaa from './aaa'
 
 class Home extends Component {
     constructor(props) {
@@ -29,6 +30,8 @@ class Home extends Component {
                 <Comp aaa="aaaa" data={new Date()}></Comp>
                 <div>{ this.props.children }</div>
                 {list}
+                <div>------------------------</div>
+                <Aaa name="name1"></Aaa>
             </div>
         );
     }

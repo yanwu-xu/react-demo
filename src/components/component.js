@@ -4,8 +4,11 @@ class Comp extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: new Date()
+            data: new Date(),
+            value: '1'
         }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     tick() {
@@ -27,12 +30,27 @@ class Comp extends Component {
         clearInterval(this.timerID)
     }
 
+    handleChange(event) {
+        console.log('change111111')
+        this.setState({
+            value: event.target.value
+        })
+    }
+
+    handleSubmit(event) {
+        event.preventDefault()
+    }
+
     render() {
         return (
-            <div>
+            <form onSubmit={this.handleSubmit}>
+                <div>{this.state.value}
+                    <input value={this.state.value} onChange={this.handleChange} aria-label='qqqqqq' aria-required="true"/>
+                </div>
                 <div>It is {this.state.data.toLocaleTimeString()}.</div>
                 <div>common {this.props.aaa}</div>
-            </div>
+                <button type="submit">提交</button>
+            </form>
         );
     }
 }
