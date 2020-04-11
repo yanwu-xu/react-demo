@@ -1,8 +1,7 @@
 
 import App from '../components/App'
-import Sub from '../components/sub'
-import About from '../components/about'
-import Home from '../components/home'
+import About from '../components/About'
+import TodoList from '../components/TodoList'
 
 const routes = [
     {
@@ -11,18 +10,11 @@ const routes = [
         routes: [
             {
                 path: '/about',
-                component: About,
-                auth: true
+                component: About
             },
             {
-                path: '/home',
-                component: Home,
-                routes: [
-                    {
-                        path: '/home/sub',
-                        component: Sub
-                    }
-                ]
+                path: '/todo',
+                component: TodoList,
             }
         ]
     }

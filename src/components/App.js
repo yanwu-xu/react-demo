@@ -5,10 +5,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Link to="/home" replace>Home</Link>
+        <Link to="/todo" replace>todo</Link>----
         <Link to="/about">About</Link>
-        <Link to="/home/sub">sub</Link>
-        <div>{ this.props.children }</div>
+        <div todos={[]}>{ this.props.children }</div>
       </div>
     );
   }
