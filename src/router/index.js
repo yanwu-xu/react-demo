@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, HashRouter, Switch, Redirect } from 'react-router-dom';
 import routes from './routerConfig'
 
-const routerMap = (routes) => {
+const routerMap = routes => {
     return routes.map((route, index) => {
         if (route.routes && route.routes.length) {
             return <Route key={index} path={route.path} render={() => 

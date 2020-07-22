@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+#root{
+  height: 100vh;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
 
 .App-logo {
   height: 40vmin;

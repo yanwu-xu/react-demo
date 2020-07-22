@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Todo from './Todo'
-import { addTodo, toggleTodo } from '../store/actions'
+import Todo from 'page/todoList/Todo'
+import { addTodo, toggleTodo } from 'store/actions'
 
 const TodoList = ({ todos, dispatch }) => {
     let input
