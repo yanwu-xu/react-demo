@@ -6,7 +6,7 @@ class About extends Component {
             <div>
                 <div>About</div>
                 <div>{this.props.children}</div>
-                <div>111111</div>
+                <div>11111222221</div>
             </div>
         );
     }
